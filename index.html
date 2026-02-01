@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<title>For My Life Partner</title>
+
+<style>
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family: "Georgia", serif;
+  background: linear-gradient(135deg,#f6f1eb,#e8dccc);
+  color:#3b2f2f;
+}
+.card{
+  width:360px;
+  height:640px;
+  background:#fffdf8;
+  border-radius:28px;
+  box-shadow:0 25px 60px rgba(0,0,0,.25);
+  padding:32px 26px;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+h1{
+  font-size:22px;
+  margin-bottom:18px;
+  font-weight:normal;
+}
+p{
+  font-size:16px;
+  line-height:1.6;
+  opacity:0;
+  animation:fadeIn 1.2s forwards;
+}
+p:nth-child(2){animation-delay:.5s}
+p:nth-child(3){animation-delay:1.2s}
+p:nth-child(4){animation-delay:2s}
+
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(8px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+.line{
+  margin:20px auto;
+  width:60px;
+  height:1px;
+  background:#b59b6a;
+}
+
+button{
+  margin-top:28px;
+  padding:12px 28px;
+  border:none;
+  border-radius:30px;
+  background:#3b2f2f;
+  color:#fff;
+  font-size:15px;
+  cursor:pointer;
+}
+.final{
+  font-size:17px;
+  line-height:1.7;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card" id="page1">
+  <h1>Tanessha</h1>
+
+  <p>
+    Main tumhe sirf pasand nahi karta,<br>
+    main tumhe **apni zindagi** ke roop me dekhta hoon.
+  </p>
+
+  <p>
+    Hum Yadav hain —  
+    yahan pyaar sirf bolne ki cheez nahi hota,<br>
+    **zimmedaari hota hai.**
+  </p>
+
+  <p>
+    Aur humare yahan,<br>
+    ek hi zindagi nahi…  
+    **7 janam** maana jaata hai.
+  </p>
+
+  <div class="line"></div>
+
+  <button onclick="nextPage()">Aage</button>
+</div>
+
+<div class="card" id="page2" style="display:none;">
+  <p class="final">
+    Maine tumhe har nazar se dekha hai,<br>
+    aur har baar ek hi baat samjhi —
+  </p>
+
+  <p class="final">
+    **har janam ke liye,<br>
+    ek hi princess hoti hai.**
+  </p>
+
+  <p class="final">
+    Agar tum poochho,<br>
+    “meri zindagi me kaun?”  
+    to jawab simple hai —
+  </p>
+
+  <p class="final">
+    **Tum. Sirf tum.**
+  </p>
+
+  <div class="line"></div>
+
+  <p class="final">
+    Main vaada nahi karta ki zindagi perfect hogi,<br>
+    par itna zaroor —
+    **tumhara saath imaandari se nibhaunga.**
+  </p>
+</div>
+
+<script>
+function nextPage(){
+  document.getElementById("page1").style.display="none";
+  document.getElementById("page2").style.display="flex";
+}
+</script>
+
+</body>
+</html>
